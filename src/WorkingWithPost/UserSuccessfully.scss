@@ -1,0 +1,10 @@
+.userSuccessfully {
+  padding: 0 0 100px;
+  background-color: $bg_color;
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}

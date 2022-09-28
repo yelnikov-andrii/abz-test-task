@@ -1,0 +1,52 @@
+.header {
+  padding: 0;
+  background-color: $bg_color;
+  font-family: 'Nunito', sans-serif;
+
+  @include onMobile {
+    padding: 20px 0;
+  }
+
+  &__nav {
+    background-color: #fff;
+    padding: 13px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include onMobile {
+      padding: 13px 16px;
+    }
+
+    &_buttons {
+      width: 210px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 164px 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Images/bgImg.jpeg);
+    color: $bg_color;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+
+    &_title {
+      max-width: 380px;
+      margin: 0 0 21px 0;
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    &_description {
+      max-width: 380px;
+      margin-bottom: 32px;
+    }
+  }
+}

@@ -1,0 +1,194 @@
+.form {
+  &__inputBlock {
+    display: flex;
+    flex-direction: column;
+
+    &_item {
+      position: relative;
+      width: 380px;
+
+      &:nth-child(3) {
+        .form__input {
+          margin: 0 0 4px 0;
+        }
+      }
+    }
+  }
+
+  &__input {
+    width: 380px;
+    height: 54px;
+    margin: 0 0 50px 0;
+    border: 1px solid #D0CFCF;
+    border-radius: 4px;
+    outline: none;
+    padding: 14px 0 14px 16px;
+    box-sizing: border-box;
+    background: transparent;
+
+    &-label {
+      align-self: flex-start;
+      text-indent: 15px;
+      color: #7E7E7E;
+      font-size: 12px;
+      line-height: 14px;
+      display: block;
+      margin: 0 0 25px 0;
+    }
+
+    &-txtLabel {
+      position: absolute;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      color: #7E7E7E;
+      background-color: $bg_color;
+      padding: 0 5px;
+      top: -6px;
+      left: 16px;
+      display: none;
+      position: absolute;
+
+      &--error {
+        color: #CB3D40;
+        display: block;
+      }
+    }
+
+    &--error {
+      border: 2px solid #CB3D40;
+    }
+
+    @include onTablet {
+      width: 328px;
+    }
+
+    &::placeholder {
+      color: #7E7E7E;
+    }
+
+    &:nth-of-type(3) {
+      margin: 0 0 4px 0;
+    }
+
+    &_radio_label {
+      display: block;
+      margin: 0 0 13px 0;
+    }
+  }
+
+  &__radioBlock {
+    width: 380px;
+    margin: 0 0 47px 0;
+
+    @include onTablet {
+      width: 328px;
+    }
+
+    &_title {
+      color: rgba(0, 0, 0, 0.87);
+      margin: 0 0 11px 0;
+    }
+  }
+
+  &__fileInput {
+    display: none;
+  }
+
+  &__fileWrapper {
+    width: 380px;
+    height: 54px;
+    margin: 0 0 50px 0;
+    border: 1px solid #D0CFCF;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+
+    &--error {
+      border: 2px solid #CB3D40;
+      box-sizing: border-box;
+    }
+
+    @include onTablet {
+      width: 328px;
+    }
+  }
+
+  &__fileLabel {
+    position: relative;
+    width: 83px;
+    height: 54px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.87);
+    border-radius: 4px 0px 0px 4px;
+    color: rgba(0, 0, 0, 0.87);
+
+    &--error {
+      border: none;
+      border-right: 2px solid #CB3D40;
+      box-sizing: border-box;
+      height: 50px;
+    }
+
+    &::before {
+      position: absolute;
+      content: attr(data-content);
+      top: 50%;
+      left: 100px;
+      transform: translateY(-50%);
+      width: 234px;
+      height: 26px;
+      color: #D0CFCF;
+    }
+
+    &--uploaded {
+      &:before {
+        color: rgba(0, 0, 0, 0.87);
+      }
+    }
+  }
+}
+
+input[type="radio"] {
+  display:none;
+}
+
+input[type="radio"] + label .form__input_radio_span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: -1px 12px 0 0;
+  vertical-align: middle;
+  border: 1px solid #D0CFCF;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="radio"] + label .form__input_radio_span--selected {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $secondary_color;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+
+  &::before {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    border-radius: 50%;
+    background-color: $secondary_color;
+  }
+}
+
+input[type="text"]:focus + span {
+  display: inline-block;
+}

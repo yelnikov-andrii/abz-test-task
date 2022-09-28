@@ -1,0 +1,27 @@
+.button {
+  border: none;
+  outline: none;
+  background-color: $primary_color;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  border-radius: 80px;
+  width: 100px;
+  height: 34px;
+  color: rgba(0, 0, 0, 0.87);
+
+  &:hover {
+    cursor: pointer;
+    background-color: $hover_color;
+  }
+
+  &--disabled {
+    background: #B4B4B4;
+    color: rgba(255, 255, 255, 0.87);
+
+    &:hover {
+      background: #B4B4B4;
+      cursor: initial;
+    }
+  }
+}

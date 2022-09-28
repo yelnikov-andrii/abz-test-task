@@ -1,0 +1,43 @@
+.workingWithGet {
+  padding: 140px 0;
+  background-color: $bg_color;
+
+  &__users {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 0 50px 0;
+    gap: 30px;
+
+    @include onDesktop {
+      padding: 0 60px;
+    }
+
+    @include onTablet {
+      padding: 0 32px;
+      gap: 16px;
+      justify-content: space-around;
+    }
+
+    &_user {
+      box-sizing: border-box;
+      min-width: 282px;
+      max-width: 370px;
+      flex-grow: 1;
+
+      @include onTablet {
+        max-width: 344px;
+        width: 344px;
+      }
+
+      @include onDesktop {
+        width: 282px;
+      }
+    }
+  }
+
+  &__blockBtn {
+    display: flex;
+    justify-content: center;
+  }
+}
